@@ -67,4 +67,3 @@
 
   Understanding bits and bytes is essential for grasping how data is processed, stored, and communicated in digital systems.
 
-
