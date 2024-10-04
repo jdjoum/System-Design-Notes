@@ -4,6 +4,8 @@
 ## Table of Contents
   1. [Computer Architecture](#computer-architecture)
   - [Bits and Bytes](#bits-and-bytes)
+  - [Computer Storage](#computer-storage)
+
 
 ## Computer Architecture
   
@@ -67,3 +69,34 @@
 
   Understanding bits and bytes is essential for grasping how data is processed, stored, and communicated in digital systems.
 
+### Computer Storage
+
+  Computer storage refers to any computing hardware and media used to store, retain, and retrieve data. It allows systems to keep and access information, both temporarily and permanently, depending on the nature of the storage. It is one of the core components of computing, impacting everything from system performance to the ability to run applications and manage large datasets. Storage can be categorized into primary and secondary storage based on its role in data processing.
+
+  Primary Storage (Volatile):
+
+  Primary storage is the main memory used by a computer's CPU to perform tasks. It is fast and typically temporary, meaning data is lost when the system powers off. Primary storage is often referred to as volatile memory because of this characteristic.
+
+  - RAM (Random Access Memory):
+    - Volatile memory where data is stored for quick access by the CPU.
+    - Data is lost when the computer shuts down.
+    - Used for running applications and the operating system.
+  - Cache Memory:
+    - Very small, fast memory located inside or close to the CPU.
+    - Stores frequently accessed data to reduce the time needed to retrieve it from slower main memory (RAM).
+    - There are typically multiple levels (L1, L2, L3) that vary in size and proximity to the CPU cores.
+
+  Secondary Storage (Non-Volatile):
+
+  Secondary storage is where data is stored permanently or semi-permanently. It is slower than primary storage but can hold much larger amounts of data.
+
+  - Hard Disk Drives (HDDs):
+    - Traditional storage technology that uses spinning disks to read and write data magnetically.
+    - Offers large storage capacities (multiple terabytes) at low costs.
+    - Slower than modern solid-state drives.
+  - Solid-State Drives (SSDs):
+    - Use flash memory to store data electronically with no moving parts.
+    - Faster than HDDs in terms of read/write speeds, but historically more expensive per gigabyte.
+    - More durable because they are less prone to mechanical failure.
+
+  
