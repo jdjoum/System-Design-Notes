@@ -5,6 +5,7 @@
   1. [Computer Architecture](#computer-architecture)
   - [Bits and Bytes](#bits-and-bytes)
   - [Computer Storage](#computer-storage)
+  - [CPU](#cpu)
 
 
 ## Computer Architecture
@@ -99,4 +100,27 @@
     - Faster than HDDs in terms of read/write speeds, but historically more expensive per gigabyte.
     - More durable because they are less prone to mechanical failure.
 
-  
+### CPU
+
+  A **CPU (Central Processing Unit)** is the primary component of a computer responsible for interpreting and executing instructions from programs. It functions as the "brain" of the system, handling all basic operations such as arithmetic, logic, control, and input/output processes.
+
+  - Components:
+    - Control Unit (CU): Directs operations by fetching and decoding instructions from memory.
+    - Arithmetic Logic Unit (ALU): Handles arithmetic (addition, subtraction) and logic operations (AND, OR).
+    - Registers: Small, fast storage locations inside the CPU used to hold temporary data and instructions.
+
+  - Operations:
+    - Fetch: Retrieves instructions from memory.
+    - Decode: Interprets the instructions.
+    - Execute: Carries out the operation (e.g., calculation, data movement).
+    - Store: Writes the result back to memory if necessary.
+
+  - Performance Factors:
+    - Clock Speed: Measured in GHz, it determines how many cycles per second the CPU can execute.
+    - Cores: Modern CPUs have multiple cores, allowing parallel processing for better multitasking.
+    - Cache: A small, high-speed memory in the CPU that stores frequently accessed data.
+
+  - Multithreading: Many CPUs support executing multiple threads simultaneously, improving performance in multi-threaded applications.
+
+  In summary, the CPU plays a critical role in running programs by executing the instructions that make up the software.
+
