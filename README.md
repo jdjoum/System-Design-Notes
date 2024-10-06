@@ -6,6 +6,7 @@
   - [Bits and Bytes](#bits-and-bytes)
   - [Computer Storage](#computer-storage)
   - [CPU](#cpu)
+  - [Compiler](#compiler)
 
 
 ## Computer Architecture
@@ -123,4 +124,20 @@
   - Multithreading: Many CPUs support executing multiple threads simultaneously, improving performance in multi-threaded applications.
 
   In summary, the CPU plays a critical role in running programs by executing the instructions that make up the software.
+
+### Compiler
+
+  A **compiler** is a program that translates source code written in a high-level programming language (like C, Java, or Python) into machine code or intermediate code that a computer's processor (CPU) can execute.
+
+  Key Phases of a Compiler:
+
+  1. Lexical Analysis: The source code is scanned and divided into tokens (like keywords, operators, and identifiers).
+  2. Syntax Analysis (Parsing): The tokens are checked for grammatical correctness, ensuring they follow the language's rules.
+  3. Semantic Analysis: The meaning of the code is verified, checking for valid data types, variable declarations, and scope.
+  4. Intermediate Code Generation: An abstract, machine-independent code is generated to optimize processing across platforms.
+  5. Optimization: The intermediate code is refined to make the final output more efficient, reducing memory use and speeding up execution.
+  6. Code Generation: The optimized intermediate code is translated into machine code specific to the target hardware.
+  7. Code Linking and Loading: The machine code is linked with libraries and converted into an executable file.
+
+  Compilers often provide error diagnostics to help developers fix issues in their code before the final executable is produced.
 
