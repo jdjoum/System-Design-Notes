@@ -7,6 +7,8 @@
   - [Computer Storage](#computer-storage)
   - [CPU](#cpu)
   - [Compiler](#compiler)
+  2. [Production App Architecture](#production-app-architecture)
+  - [Continuous Integration & Continuous Deployment (CI/CD)](#continuous-integration--continuous-deployment-cicd)
 
 
 ## Computer Architecture
@@ -140,4 +142,36 @@
   7. Code Linking and Loading: The machine code is linked with libraries and converted into an executable file.
 
   Compilers often provide error diagnostics to help developers fix issues in their code before the final executable is produced.
+
+## Production App Architecture
+
+### Continuous Integration & Continuous Deployment (CI/CD)
+
+  **CI/CD (Continuous Integration and Continuous Deployment/Delivery)** is a practice in software development that automates the process of integrating code changes, testing them, and deploying them to production.
+
+  Key Concepts:
+
+  - Continuous Integration (CI):
+    - Developers frequently merge code changes into a shared repository.
+    - Automated tests and builds are triggered to ensure the code integrates smoothly with the existing codebase.
+    - Benefits: Early detection of integration issues, improving code quality.
+  - Continuous Deployment (CD):
+    - Every change that passes the automated testing phase is automatically deployed to production.
+    - Requires a high degree of confidence in the test coverage.
+    - Benefits: Faster delivery of features and bug fixes to users.
+  - Continuous Delivery (alternative CD):
+    - Code changes are automatically prepared for release to production but require manual approval before deployment.
+    - Balances automation with human oversight, making sure deployments are safe and controlled.
+
+  Tools Commonly Used:
+
+  - CI Tools: Jenkins, GitLab CI, Travis CI.
+  - CD Tools: AWS CodePipeline, CircleCI, GitHub Actions.
+
+  Key Benefits:
+
+  - Reduces manual errors.
+  - Ensures consistent software releases.
+  - Improves collaboration and speeds up feedback loops.
+  - Automates deployment processes.
 
