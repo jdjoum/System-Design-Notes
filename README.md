@@ -9,6 +9,7 @@
   - [Compiler](#compiler)
   2. [Production App Architecture](#production-app-architecture)
   - [Continuous Integration & Continuous Deployment (CI/CD)](#continuous-integration--continuous-deployment-cicd)
+  - [Load Balancer](#load-balancer)
 
 
 ## Computer Architecture
@@ -174,4 +175,36 @@
   - Ensures consistent software releases.
   - Improves collaboration and speeds up feedback loops.
   - Automates deployment processes.
+
+### Load Balancer
+
+  A **Load Balancer** is a system or device that distributes incoming network traffic across multiple servers to ensure no single server becomes overwhelmed. It helps improve the availability, reliability, and scalability of applications.
+
+  Key Functions:
+
+  1. Traffic Distribution: Distributes requests evenly across servers, preventing overload on any one server.
+  2. Health Monitoring: Regularly checks the health of servers, ensuring traffic is only directed to those that are functioning correctly.
+  3. Failover: If a server fails, the load balancer reroutes traffic to healthy servers, ensuring high availability.
+  4. Scalability: Enables easy addition of new servers to handle increasing traffic.
+  5. Session Persistence: Ensures that a user's session is maintained by routing subsequent requests to the same server.
+
+  Types of Load Balancers:
+
+  - Layer 4 (Transport Layer): Distributes traffic based on IP address and port (e.g., TCP/UDP).
+  - Layer 7 (Application Layer): Distributes traffic based on application-level data (e.g., HTTP headers, cookies).
+
+  Load Balancing Algorithms:
+
+  - Round Robin: Distributes requests sequentially across servers.
+  - Least Connections: Sends traffic to the server with the fewest active connections.
+  - IP Hash: Routes requests based on the client’s IP address.
+
+  Benefits:
+
+  - Improved Performance: By distributing traffic, load balancers reduce response time and increase throughput.
+  - High Availability: Ensures that services remain available even if some servers fail.
+  - Flexibility: Supports scaling up or down depending on traffic load.
+
+  Popular load balancers include NGINX, HAProxy, and cloud-based solutions like AWS Elastic Load Balancing (ELB).
+
 
