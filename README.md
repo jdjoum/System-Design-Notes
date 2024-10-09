@@ -10,6 +10,7 @@
   2. [Production App Architecture](#production-app-architecture)
   - [Continuous Integration & Continuous Deployment (CI/CD)](#continuous-integration--continuous-deployment-cicd)
   - [Load Balancer](#load-balancer)
+  - [Storage](#storage)
 
 
 ## Computer Architecture
@@ -207,4 +208,40 @@
 
   Popular load balancers include NGINX, HAProxy, and cloud-based solutions like AWS Elastic Load Balancing (ELB).
 
+### Storage
 
+  In production app architecture, **storage** refers to how data is persistently managed and accessed. Effective storage design ensures that applications can handle large amounts of data efficiently, ensuring speed, security, and scalability.
+
+  Key Types of Storage:
+
+  1. Relational Databases (SQL):
+  - Structured, schema-based.
+  - Examples: MySQL, PostgreSQL.
+  - Suitable for applications needing ACID transactions, complex querying, and data integrity.
+  2. NoSQL Databases:
+  - Flexible schemas, designed for scalability.
+  - Examples: MongoDB, Cassandra.
+  - Ideal for unstructured or semi-structured data like JSON, logs, or large-scale distributed applications.
+  3. Blob/Object Storage:
+  - Optimized for storing large amounts of unstructured data.
+  - Examples: AWS S3, Google Cloud Storage.
+  - Used for media files, backups, and big data storage.
+  4. In-memory Storage:
+  - Stores data in RAM for fast access.
+  - Examples: Redis, Memcached.
+  - Best for caching, session storage, or real-time data.
+  5. Distributed Storage:
+  - Scales across multiple servers or regions.
+  - Examples: HDFS, Ceph.
+  - Handles large datasets in data-intensive applications (e.g., analytics).
+
+  Key Considerations:
+
+  - Data Consistency: Ensuring that data remains accurate and reliable across the system.
+  - Scalability: Ability to grow as the application and data increase.
+  - Backup & Recovery: Mechanisms to prevent data loss in case of failure.
+  - Latency: Minimizing response times for data retrieval.
+  - Security: Implementing encryption, access control, and compliance with data privacy standards.
+
+  In production, combining these storage types based on use cases ensures a robust and scalable architecture.
+  
