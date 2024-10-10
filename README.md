@@ -11,6 +11,7 @@
   - [Continuous Integration & Continuous Deployment (CI/CD)](#continuous-integration--continuous-deployment-cicd)
   - [Load Balancer](#load-balancer)
   - [Storage](#storage)
+  - [Logging & Monitoring](#logging--monitoring)
 
 
 ## Computer Architecture
@@ -244,4 +245,25 @@
   - Security: Implementing encryption, access control, and compliance with data privacy standards.
 
   In production, combining these storage types based on use cases ensures a robust and scalable architecture.
-  
+
+### Logging & Monitoring
+
+  1. Logging:
+  - Purpose: Captures detailed information about application events (errors, requests, database queries, etc.) to aid in troubleshooting, debugging, and tracking system behavior.
+  - Components:
+    - Log Collection: Logs are gathered from different parts of the app (frontend, backend, microservices) using libraries like `log4j`, `winston`, or `logrus`.
+    - Log Storage: Logs are centralized in tools like ELK Stack (Elasticsearch, Logstash, Kibana), Fluentd, or Cloud-based solutions (AWS CloudWatch, GCP Stackdriver).
+    - Log Rotation: To manage large log sizes, logs are rotated, compressed, or archived regularly.
+  - Key Features: Time-stamped, structured logs (JSON format often preferred), with different log levels (INFO, WARN, ERROR, DEBUG).
+    
+  2. Monitoring:
+  - Purpose: Continuously observes system performance and health metrics (CPU usage, memory, disk I/O, request latencies) to detect issues early and ensure system reliability.
+  - Components:
+    - Metrics Collection: Tools like Prometheus or Datadog gather system and application metrics in real-time.
+    - Alerting: Alerts are triggered based on predefined thresholds (e.g., CPU usage > 80%) and sent via channels like Slack, email, or PagerDuty.
+    - Visualization: Dashboards (Grafana, Cloud-based solutions) visualize the system’s performance to provide insight into app behavior.
+  - Key Features: Monitors system uptime, database performance, response times, and supports anomaly detection.
+
+  Integration: Logging and monitoring work together to provide observability in production environments, ensuring early detection of issues and quick troubleshooting.
+
+
