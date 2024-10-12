@@ -13,6 +13,8 @@
   - [Storage](#storage)
   - [Logging & Monitoring](#logging--monitoring)
   - [Staging Environment](#staging-environment)
+  3. [What is Good Design?](#what-is-good-design)
+  - [Scalability](#scalability)
 
 
 ## Computer Architecture
@@ -279,4 +281,28 @@
   - Deployment Practice: New features and changes are deployed here first to ensure smooth transitions to production.
 
   It serves as the last checkpoint before live deployment, helping catch issues that might not appear in development.
-  
+
+## What is Good Design?
+
+### Scalability
+
+  **Scalability** in production app architecture refers to the system's ability to handle increasing loads efficiently. As an app grows in users or data, its architecture needs to ensure performance remains high. There are two main types of scalability:
+
+  1. Vertical Scalability (Scaling Up): Increasing the resources of a single server, like CPU or memory. It's simpler but has hardware limitations and can become expensive.
+
+  2. Horizontal Scalability (Scaling Out): Adding more servers or nodes to distribute the load. It allows for greater flexibility and resilience but requires more complex coordination, like load balancing and data partitioning.
+
+  Key Scalability Concepts:
+  - Load Balancers: Distribute traffic across multiple servers, preventing any one server from becoming overloaded.
+  - Microservices: Breaking applications into smaller, independent services that can be scaled individually.
+  - Caching: Storing frequently accessed data in a cache (like Redis) reduces load on databases.
+  - Sharding: Splitting databases across multiple servers to handle large datasets.
+  - Auto-scaling: Automatically adding/removing servers based on traffic demand.
+
+  Challenges:
+
+  - State Management: Handling state across multiple servers requires mechanisms like distributed caches or stateless architectures.
+  - Data Consistency: Ensuring data remains consistent when distributed across multiple databases or services.
+
+  Scalability ensures that the system grows smoothly with demand while maintaining performance and cost efficiency.
+
