@@ -15,6 +15,7 @@
   - [Staging Environment](#staging-environment)
   3. [What is Good Design?](#what-is-good-design)
   - [Scalability](#scalability)
+  - [Maintainability](#maintainability)
 
 
 ## Computer Architecture
@@ -286,7 +287,7 @@
 
 ### Scalability
 
-  **Scalability** in production app architecture refers to the system's ability to handle increasing loads efficiently. As an app grows in users or data, its architecture needs to ensure performance remains high. There are two main types of scalability:
+  **Scalability** in system design refers to the system's ability to handle increasing loads efficiently. As an app grows in users or data, its architecture needs to ensure performance remains high. There are two main types of scalability:
 
   1. Vertical Scalability (Scaling Up): Increasing the resources of a single server, like CPU or memory. It's simpler but has hardware limitations and can become expensive.
 
@@ -305,4 +306,25 @@
   - Data Consistency: Ensuring data remains consistent when distributed across multiple databases or services.
 
   Scalability ensures that the system grows smoothly with demand while maintaining performance and cost efficiency.
+
+### Maintainability
+
+  **Maintainability** in system design refers to how easily a system can be modified, updated, or extended over time. A maintainable system ensures that developers can fix bugs, add new features, and improve performance with minimal disruption or risk to the existing system.
+
+  Key Concepts for Maintainability:
+
+  1. Modularity: Breaking the system into small, independent components or services (e.g., microservices). Each module can be maintained or updated without affecting the entire system.
+  2. Separation of Concerns: Each component or service should focus on a single responsibility. This reduces complexity and makes the system easier to understand and modify.
+  3. Readability & Documentation: Code should be well-organized, consistently structured, and documented. This helps new developers quickly understand the system and make changes without introducing bugs.
+  4. Testability: A maintainable system is easy to test. Automated unit, integration, and end-to-end tests help catch issues early and ensure that changes do not break existing functionality.
+  6. Version Control & Continuous Integration (CI): Using version control (e.g., Git) and CI pipelines allows teams to track changes, review code, and deploy updates safely.
+  7. Decoupling: Reducing dependencies between components makes the system easier to update or replace individual parts without affecting others.
+
+  Challenges:
+
+  - Technical Debt: Accumulating quick fixes or poor design choices can hinder long-term maintainability.
+  - Backward Compatibility: Ensuring new updates do not break older parts of the system is crucial in maintaining a stable, evolving system.
+
+  Maintainability ensures that the system can evolve efficiently and reliably, allowing for easier updates and longer system lifespan.
+
 
