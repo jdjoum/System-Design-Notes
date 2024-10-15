@@ -17,6 +17,7 @@
   - [Scalability](#scalability)
   - [Maintainability](#maintainability)
   - [Efficiency](#efficiency)
+  - [Reliability](#reliability)
 
 
 ## Computer Architecture
@@ -344,4 +345,18 @@
   8. Network Efficiency: Minimizing the size of data transfers, compressing data, and reducing the number of round trips between client and server improves latency.
 
   Efficiency is a balance between resource utilization and system performance, key to creating scalable, reliable systems.
+
+### Reliability
+
+  **Reliability** in System Design refers to the ability of a system to function correctly and consistently over time, even in the presence of failures or unexpected conditions. Key aspects of designing for reliability include:
+
+  1. Redundancy: Duplication of critical components (like servers, databases, and services) to prevent single points of failure. This can involve active-active or active-passive setups.
+  2. Fault Tolerance: The system’s ability to continue functioning in case of component failures. This is achieved through mechanisms like load balancing, failover, and replication.
+  3. Data Consistency: Ensuring data remains accurate and consistent across distributed systems, often using replication techniques, consensus protocols (e.g., Paxos, Raft), and eventual consistency models in some cases.
+  4. Monitoring and Alerts: Continuous tracking of system health, resource usage, and performance to detect issues early and alert operators before they affect users.
+  5. Graceful Degradation: When parts of the system fail, the system should degrade in a controlled way, providing limited functionality instead of failing completely.
+  6. Backups and Disaster Recovery: Regular data backups and clear disaster recovery plans ensure that the system can recover from catastrophic failures or data loss.
+
+  By addressing these areas, a reliable system can maintain high availability, minimize downtime, and ensure consistent user experiences despite unforeseen issues.
+
 
