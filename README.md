@@ -16,6 +16,7 @@
   3. [What is Good Design?](#what-is-good-design)
   - [Scalability](#scalability)
   - [Maintainability](#maintainability)
+  - [Efficiency](#efficiency)
 
 
 ## Computer Architecture
@@ -327,4 +328,20 @@
 
   Maintainability ensures that the system can evolve efficiently and reliably, allowing for easier updates and longer system lifespan.
 
+### Efficiency
+
+  **Efficiency** in system design refers to the optimization of resources—such as CPU, memory, storage, and network bandwidth—while maintaining performance, scalability, and reliability. A well-designed system should use minimal resources to achieve the required throughput and low-latency responses.
+
+  Here are key aspects of efficiency in system design:
+
+  1. Time Complexity: Efficient systems process tasks quickly, minimizing the time complexity of operations (e.g., using O(log n) or O(n) algorithms over O(n^2)).
+  2. Space Complexity: Optimal memory usage helps reduce storage costs and ensures that the system can scale without running out of memory.
+  3. Caching: Storing frequently accessed data in cache reduces the need to repeatedly fetch data from slower storage layers (e.g., databases), improving response times.
+  4. Load Balancing: Efficient load distribution across servers ensures that no single server is overwhelmed, optimizing performance under high traffic.
+  5. Asynchronous Processing: Offloading non-critical tasks to background jobs reduces the load on the system's core components, allowing faster user-facing operations.
+  6. Concurrency: Designing systems to handle multiple tasks simultaneously (e.g., using multi-threading or event-driven models) increases throughput.
+  7. Data Sharding and Partitioning: Splitting large datasets across multiple databases or servers allows for parallel processing, reducing query times.
+  8. Network Efficiency: Minimizing the size of data transfers, compressing data, and reducing the number of round trips between client and server improves latency.
+
+  Efficiency is a balance between resource utilization and system performance, key to creating scalable, reliable systems.
 
