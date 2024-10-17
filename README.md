@@ -20,6 +20,7 @@
   - [Reliability](#reliability)
   4. [Data Management](#data-management)
   - [Moving Data](#moving-data)
+  - [Storing Data](#storing-data)
 
 
 ## Computer Architecture
@@ -379,4 +380,31 @@
   8. Latency and Bandwidth: It's crucial to optimize data movement for low latency and efficient bandwidth usage, especially in high-traffic systems.
 
   This is central to maintaining performance, reliability, and scalability in a distributed system.
+
+### Storing Data
+
+  In system design, storing data involves choosing where and how to persist data to meet system requirements like scalability, consistency, and fault tolerance. Here’s a short overview:
+
+  1. Database Types:
+  - Relational Databases (SQL): Store structured data in tables with predefined schemas. They support strong ACID properties (Atomicity, Consistency, Isolation, Durability). E.g., MySQL, PostgreSQL.
+  - NoSQL Databases: Handle unstructured, flexible data, ideal for high-volume, distributed systems. They trade ACID for scalability. Types include:
+    - Key-Value Stores: E.g., Redis, DynamoDB.
+    - Document Stores: E.g., MongoDB, Couchbase.
+    - Columnar Stores: E.g., Cassandra, HBase.
+    - Graph Databases: E.g., Neo4j.
+  2. Consistency Models:
+  - Strong Consistency: Ensures that all users see the same data simultaneously. Good for systems needing accuracy.
+  - Eventual Consistency: In distributed systems, replicas may temporarily diverge but converge over time. It favors availability over immediate consistency.
+  3. Scaling:
+  - Vertical Scaling: Adding more resources (CPU, RAM) to a single server.
+  - Horizontal Scaling: Distributing data across multiple servers or shards to handle larger volumes. Often used with NoSQL.
+  4. Caching:
+  - In-memory Caches (like Redis or Memcached) store frequently accessed data to reduce load on databases and improve performance.
+  5. Data Replication:
+  - Master-Slave Replication: One primary server (master) handles writes; replicas (slaves) sync data for read scaling.
+  - Multi-Master Replication: Multiple nodes can handle writes, useful for high-availability systems.
+  6. Backup & Recovery:
+  - Regular backups are essential for preventing data loss, and recovery strategies must be in place to handle failures.
+
+  This high-level summary highlights essential concepts for designing a robust and scalable data storage system.
 
