@@ -21,6 +21,7 @@
   4. [Data Management](#data-management)
   - [Moving Data](#moving-data)
   - [Storing Data](#storing-data)
+  - [Transforming Data](#transforming-data)
 
 
 ## Computer Architecture
@@ -407,4 +408,29 @@
   - Regular backups are essential for preventing data loss, and recovery strategies must be in place to handle failures.
 
   This high-level summary highlights essential concepts for designing a robust and scalable data storage system.
+
+### Transforming Data
+
+  In system design, **transforming data** refers to the process of converting data from one format, structure, or schema to another to facilitate processing, storage, or retrieval in distributed systems.
+
+  Key Concepts:
+
+  1. Normalization & Denormalization:
+  - Normalization: Breaking data into smaller, logically organized tables to reduce redundancy and improve consistency.
+  - Denormalization: Combining tables to optimize read performance, common in NoSQL databases for fast querying.
+  2. ETL (Extract, Transform, Load):
+  - Extract: Retrieving raw data from various sources.
+  - Transform: Converting data into the required format, applying business logic or rules (e.g., aggregation, filtering).
+  - Load: Storing the transformed data in a target system (like a database or data warehouse).
+  3. Data Aggregation:
+  - Combining multiple data records into a summarized format (e.g., counting, averaging) to improve performance for analytics.
+  4. Encoding/Decoding:
+  - Data may be transformed into compressed or encrypted formats for transmission or storage, requiring decoding upon retrieval.
+  5. Serialization/Deserialization:
+  - Serialization: Converting data into a format suitable for storage or transfer (e.g., JSON, XML).
+  - Deserialization: Reversing this process to retrieve the original data structure.
+  6. Schema Evolution:
+  - Handling changes in the structure of data (schemas) over time, ensuring backward compatibility in distributed systems.
+
+  Efficient data transformation improves scalability and performance in system design by optimizing how systems handle, store, and retrieve data across different components.
 
