@@ -22,6 +22,7 @@
   - [Moving Data](#moving-data)
   - [Storing Data](#storing-data)
   - [Transforming Data](#transforming-data)
+  - [CAP Theorem](#cap-theorem)
 
 
 ## Computer Architecture
@@ -433,4 +434,26 @@
   - Handling changes in the structure of data (schemas) over time, ensuring backward compatibility in distributed systems.
 
   Efficient data transformation improves scalability and performance in system design by optimizing how systems handle, store, and retrieve data across different components.
+
+### CAP Theorem
+
+  The **CAP Theorem** in system design, proposed by Eric Brewer, states that a distributed system can only guarantee two out of three properties simultaneously:
+
+  1. Consistency (C): Every read receives the most recent write, ensuring all nodes in the system reflect the same data at the same time.
+  2. Availability (A): Every request (read or write) receives a response, even if some nodes are down, ensuring the system is operational.
+  3. Partition Tolerance (P): The system continues to function even if there is a network partition (a communication breakdown between nodes).
+
+  Key Insight:
+
+  In the presence of a network partition (which is inevitable in distributed systems), designers must choose between:
+  - Consistency: Ensuring all nodes have the same data (but some requests might fail).
+  - Availability: Keeping the system operational (but allowing some nodes to have outdated data).
+
+  Examples:
+  - CP Systems: Prioritize Consistency and Partition Tolerance (e.g., HBase).
+  - AP Systems: Prioritize Availability and Partition Tolerance (e.g., Cassandra).
+  - CA Systems: Only achievable when there are no network partitions, typically in non-distributed systems.
+
+  The CAP theorem guides trade-offs in designing distributed systems based on the system’s requirements for consistency, availability, and tolerance to network failures.
+
 
