@@ -23,6 +23,7 @@
   - [Storing Data](#storing-data)
   - [Transforming Data](#transforming-data)
   - [CAP Theorem](#cap-theorem)
+  - [Throughput](#throughput)
 
 
 ## Computer Architecture
@@ -456,4 +457,14 @@
 
   The CAP theorem guides trade-offs in designing distributed systems based on the system’s requirements for consistency, availability, and tolerance to network failures.
 
+### Throughput
+
+  **Throughput** in system design refers to the amount of data or requests a system can process in a given period of time, typically measured in requests per second (RPS), transactions per second (TPS), or bits per second (bps). It is a key performance metric used to assess a system's capacity and efficiency.
+
+  Key aspects of throughput:
+
+  - Max Throughput: The highest rate at which the system can process requests while maintaining stability.
+  - Factors Influencing Throughput: Includes network bandwidth, CPU capacity, database performance, and I/O operations.
+  - Scalability: Systems often need to scale (vertically or horizontally) to handle higher throughput as demand grows.
+  - Bottlenecks: Identifying and addressing components that limit throughput, such as slow database queries or limited processing power, is crucial for optimizing performance.
 
