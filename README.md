@@ -24,6 +24,7 @@
   - [Transforming Data](#transforming-data)
   - [CAP Theorem](#cap-theorem)
   - [Throughput](#throughput)
+  - [Latency](#latency)
 
 
 ## Computer Architecture
@@ -467,4 +468,23 @@
   - Factors Influencing Throughput: Includes network bandwidth, CPU capacity, database performance, and I/O operations.
   - Scalability: Systems often need to scale (vertically or horizontally) to handle higher throughput as demand grows.
   - Bottlenecks: Identifying and addressing components that limit throughput, such as slow database queries or limited processing power, is crucial for optimizing performance.
+
+### Latency
+
+  In system design, **latency** refers to the time it takes for a request to travel from the client to the server and back, or the time it takes for data to move through the system. Lower latency means faster response times, which is critical for ensuring a good user experience.
+
+  Key Factors Affecting Latency:
+  1. Network Latency: Time taken for data to travel over the network due to distance, bandwidth, or congestion.
+  2. Processing Latency: Time spent by servers and databases to process the request.
+  3. Disk Latency: Time taken to read or write data to disk (HDD vs. SSD impacts this).
+  4. Database Latency: Query execution time and time spent accessing or retrieving data.
+  
+  Strategies to Reduce Latency:
+  - Caching: Store frequently accessed data in memory (e.g., Redis) to avoid repeated database hits.
+  - Load Balancing: Distribute traffic evenly across servers to prevent overloading any single server.
+  - CDNs: Content Delivery Networks bring data closer to users by caching it at multiple geographical locations.
+  - Efficient Algorithms: Use optimized algorithms to reduce processing time.
+  - Asynchronous Processing: Handle tasks that don’t need to be synchronous in the background to improve user-perceived response times.
+
+  Latency is often measured in milliseconds (ms), and optimizing it is crucial for scaling large systems effectively.
 
