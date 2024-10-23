@@ -25,6 +25,9 @@
   - [CAP Theorem](#cap-theorem)
   - [Throughput](#throughput)
   - [Latency](#latency)
+  5. [Networking](#networking)
+  - [IP Address](#ip-address)
+
 
 
 ## Computer Architecture
@@ -488,3 +491,34 @@
 
   Latency is often measured in milliseconds (ms), and optimizing it is crucial for scaling large systems effectively.
 
+## Networking
+
+### IP Address
+
+  An **IP address (Internet Protocol address)** is a unique identifier assigned to devices in a network, enabling communication between them. In system design, it plays a crucial role in networking and routing, ensuring that data can be sent and received between servers, clients, and services.
+
+  Key Points:
+
+  1. Types of IP Addresses:
+  - IPv4: 32-bit, with a format like 192.168.1.1, supporting ~4.3 billion addresses.
+  - IPv6: 128-bit, with a format like 2001:0db8:85a3:0000:0000:8a2e:0370:7334, designed to handle a vastly larger number of addresses due to IPv4 exhaustion.
+  2. Public vs Private IP:
+  - Public IP: Globally unique, used for identifying devices on the internet.
+  - Private IP: Used within internal networks, not routable on the internet (e.g., 192.168.x.x).
+  3. Static vs. Dynamic IP:
+  - Static IP: Permanently assigned to a device or server, useful for DNS configurations and hosting.
+  - Dynamic IP: Temporarily assigned, changes over time, typically used by client devices.
+  4. Routing
+  - IP addresses facilitate routing, where data packets are forwarded between networks based on destination IPs, involving routers, switches, and gateways.
+  5. DNS Resolution
+  - IP addresses are often mapped to human-readable domain names using DNS (Domain Name System), allowing users to connect to services via domains rather than numeric IPs.
+
+  In System Design:
+
+  - Load Balancing: IP addresses help distribute incoming traffic across multiple servers.
+  - Geo-location: Identifies user location based on their IP for optimized content delivery.
+  - Security: Firewalls and security rules can allow or block traffic based on IP addresses.
+
+  This is essential for building scalable, efficient systems with reliable network communication.
+
+  
